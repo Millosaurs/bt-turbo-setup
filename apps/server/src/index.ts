@@ -10,3 +10,5 @@ serve(
 		console.log(`Server is running on http://localhost:${info.port}`);
 	},
 );
+
+export type AppType = typeof app;

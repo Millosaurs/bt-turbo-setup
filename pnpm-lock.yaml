@@ -167,6 +167,9 @@ importers:
       '@bt-turbo-setup/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@bt-turbo-setup/rpc':
+        specifier: workspace:*
+        version: link:../../packages/rpc
       '@tailwindcss/postcss':
         specifier: ^4.1.10
         version: 4.1.17
@@ -240,6 +243,12 @@ importers:
       drizzle-kit:
         specifier: ^0.31.2
         version: 0.31.7
+
+  packages/rpc:
+    dependencies:
+      hono:
+        specifier: ^4.10.6
+        version: 4.10.7
 
 packages:
 

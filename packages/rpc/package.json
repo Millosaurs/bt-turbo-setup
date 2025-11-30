@@ -1,0 +1,9 @@
+{
+  "name": "@bt-turbo-setup/rpc",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "hono": "^4.10.6"
+  }
+}
