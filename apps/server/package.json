@@ -3,24 +3,37 @@
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "build": "tsdown",
+    "build": "tsc && tsc-alias",
     "check-types": "tsc -b",
     "compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
     "dev": "bun run --hot src/index.ts",
-    "start": "bun run dist/index.js"
+    "start": "bun run dist/src/index.js"
   },
   "dependencies": {
-    "hono": "^4.8.2",
     "better-auth": "catalog:",
     "dotenv": "catalog:",
-    "zod": "^4.1.11",
+    "@asteasolutions/zod-to-openapi": "^8.1.0",
+    "@hono/node-server": "^1.19.6",
+    "@hono/zod-openapi": "^1.1.5",
+    "@libsql/client": "^0.15.15",
+    "@neondatabase/serverless": "^1.0.2",
+    "@scalar/hono-api-reference": "^0.9.25",
+    "dotenv-expand": "^12.0.3",
+    "drizzle-orm": "^0.44.7",
+    "drizzle-zod": "^0.8.3",
+    "hono": "^4.10.6",
+    "hono-pino": "^0.10.3",
+    "pino": "^10.1.0",
+    "pino-pretty": "^13.1.2",
+    "stoker": "^2.0.1",
+    "zod": "^4.1.12",
     "@bt-turbo-setup/auth": "workspace:*",
     "@bt-turbo-setup/db": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.8.2",
     "@types/bun": "^1.2.6",
-    "tsdown": "^0.16.5",
+     "tsc-alias": "^1.8.10",
     "@bt-turbo-setup/config": "workspace:*"
   }
 }
