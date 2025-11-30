@@ -1,0 +1,33 @@
+{
+  "name": "bt-turbo-setup",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "check": "oxlint",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F server dev",
+    "db:push": "turbo -F @bt-turbo-setup/db db:push",
+    "db:studio": "turbo -F @bt-turbo-setup/db db:studio",
+    "db:generate": "turbo -F @bt-turbo-setup/db db:generate",
+    "db:migrate": "turbo -F @bt-turbo-setup/db db:migrate"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "@biomejs/biome": "^2.2.0",
+    "oxlint": "^1.12.0",
+    "@types/bun": "^1.2.6"
+  },
+  "packageManager": "pnpm@10.14.0"
+}
